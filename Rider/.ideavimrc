@@ -1,0 +1,94 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+set number                        " line numbers
+"set hlsearch                      " highlight search occurrences
+"set ignorecase                    " ignore case in search patterns
+set smartcase                     " no ignore case when pattern is uppercase
+set incsearch                     " show search results while typing
+"set wrapscan                      " searches wrap around the end of the file
+
+"set gdefault                      " substitute all occurrences in line per default
+set history=10000                 " keep x lines of command line history
+set scrolloff=5 sidescrolloff=10  " keep some lines before and after the cursor visible
+set clipboard=unnamedplus,unnamed,ideaput " integrate with system clipboard
+
+
+" set multiple-cursors
+set surround                      " emulate vim-surround plugin
+set highlightedyank               " highlight after yanking
+
+
+" set <leader> to <space>
+let mapleader = " "
+
+
+" make Y behave like D and C, yanking till end of line
+map Y y$
+
+" change font size
+nmap + :action EditorIncreaseFontSize<CR>
+nmap - :action EditorDecreaseFontSize<CR>
+nmap <leader>= :action EditorResetFontSize<CR>
+
+
+"set visualbell
+set noerrorbells
+
+set showmode
+set ignorecase
+
+map , @@
+
+" smart home
+nmap <Home> ^
+imap <silent> <Home> <C-O>^
+
+" code navigation
+
+nmap gi :action GotoImplementation<CR>
+nmap gs :action GotoSuperMethod<CR>
+nmap gr :action ShowUsages<CR>
+
+
+" visual selection shift
+set keymodel=startsel
+nnoremap <S-Left> :action EditorLeftWithSelection<CR>
+nnoremap <S-Right> :action EditorRightWithSelection<CR>
+nnoremap <S-Up> :action EditorUpWithSelection<CR>
+nnoremap <S-Down> :action EditorDownWithSelection<CR>
+
+inoremap <S-Left> <C-O>:action EditorLeftWithSelection<CR>
+inoremap <S-Right> <C-O>:action EditorRightWithSelection<CR>
+inoremap <S-Up> <C-O>:action EditorUpWithSelection<CR>
+inoremap <S-Down> <C-O>:action EditorDownWithSelection<CR>
+
+
+inoremap jk <ESC>
+
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
