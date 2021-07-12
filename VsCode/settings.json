@@ -1,239 +1,285 @@
 {
-    // Terminal Configs
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "terminal.integrated.shellArgs.windows": [
-        "-i"
-    ],
-    "terminal.integrated.shell.linux": "/usr/bin/zsh",
-    "terminal.integrated.shellArgs.linux": [
-        "-i"
-    ],
-    // "terminal.integrated.fontFamily": "Monaco, Hack",
-    // jspcd Configs
-    "jscpd.skipComments": true,
-    "jscpd.minTokens": 50,
-    "jscpd.languagesExts": "javascript:es5,es6,es7,js",
-    "window.menuBarVisibility": "toggle",
-    "window.enableMenuBarMnemonics": false,
-    "window.customMenuBarAltFocus": false,
-    "window.restoreWindows": "none",
-    "workbench.editor.enablePreview": false,
-    "workbench.startupEditor": "none",
-    "workbench.activityBar.visible": true,
-    "workbench.settings.editor": "json",
-    "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.perEditorGroup": true,
-    "workbench.editor.limit.value": 10,
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.editor.pinnedTabSizing": "shrink",
-    // ZenMode Configs
-    "zenMode.hideStatusBar": false,
-    "zenMode.hideLineNumbers": false,
-    "zenMode.restore": true,
-    "editor.renameOnType": true,
-    "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.fontLigatures": true,
-    "editor.fontFamily": "'Monaco for Powerline', Hack,  'Consolas ligaturized', Consolas , Monaco, 'B Nazanin', Hack ,'Fira Code'  ",
-    "editor.fontSize": 14,
-    "editor.minimap.enabled": true,
-    "editor.minimap.scale": 1,
-    "editor.minimap.showSlider": "always",
-    "editor.minimap.maxColumn": 100,
-    "editor.parameterHints.cycle": true,
-    "editor.lineNumbers": "on",
-    "editor.semanticHighlighting.enabled": false,
-    "editor.autoIndent": "full",
-    "editor.suggestSelection": "first",
-    "editor.foldingStrategy": "auto",
-    "editor.folding": true,
-    // "editor.showFoldingControls": "always",
-    // Git Configs
-    "git.confirmSync": true,
-    "git.autofetch": true,
-    "git.suggestSmartCommit": false,
-    "gitlens.keymap": "none",
-    // Git Project Manager
-    "gitProjectManager.baseProjectsFolders": [
-        "/home/alireza/Sources"
-    ],
-    // "vim.statusBarColorControl": true,
-    // "vim.statusBarColors.normal": "#222226",
-    // "vim.statusBarColors.insert": "#201920",
-    // "vim.statusBarColors.commandlineinprogress": "#222221",
-    // "vim.statusBarColors.searchinprogressmode": "#201929",
-    "vim.startInInsertMode": false,
-    //"vim.useSystemClipboard": true,
-    "vim.camelCaseMotion.enable": true,
-    "vim.useCtrlKeys": false,
-    "vim.highlightedyank.enable": true,
-    "vim.easymotion": true,
-    "vim.foldfix": true,
-    "vim.handleKeys": {
-        "<C-c>": false,
-        "<C-r>": true,
-        "<C-d>": true,
-        "<C-u>": true,
-        "<C-o":true,
-        "<C-i":true,
-        "<C-q>": true,
-        "<C-[>": true,
-    },
-    "vim.insertModeKeyBindings": [
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    // Add custom actions and keybindings to this array.
+    // To unbind a key combination from your defaults.json, set the command to "unbound".
+    // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
+    "actions": 
+    [
+        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
+        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
+        // To learn more about selection, visit https://aka.ms/terminal-selection
         {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ],
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
         },
-    ],
-    "vim.leader": " ",
-    // Rainbow Indent
-    "indentRainbow.colors": [
-        "rgba(16,16,16,0.11)",
-        "rgba(16,16,16,0.21)",
-        "rgba(16,16,16,0.31)",
-        "rgba(16,16,16,0.41)",
-        "rgba(16,16,16,0.51)",
-        "rgba(16,16,16,0.61)",
-        "rgba(16,16,16,0.71)",
-        "rgba(16,16,16,0.81)",
-        "rgba(16,16,16,0.91)",
-        "rgba(16,16,16,1.0)"
-    ],
-    "indentRainbow.errorColor": "rgba(100,16,32,0.3)",
-    // Csharp
-    "csharp.format.enable": true,
-    "csharp.suppressDotnetRestoreNotification": true,
-    "csharp.referencesCodeLens.enabled": true,
-    "csharp.semanticHighlighting.enabled": true,
-    // Csharpfixformat
-    "csharpfixformat.style.braces.allowInlines": true,
-    "csharpfixformat.style.braces.onSameLine": false,
-    "csharpfixformat.style.indent.regionIgnored": true,
-    "csharpfixformat.sort.usings.enabled": true,
-    "csharpfixformat.style.enabled": true,
-    "csharpfixformat.style.newline.atEnd": false,
-    "csharpfixformat.style.indent.switchCaseIgnored": true,
-    "csharpfixformat.style.indent.preprocessorIgnored": true,
-    "csharpfixformat.style.spaces.beforeParenthesis": false,
-    // defaultFormatters
-    "[xml]": {
-        "editor.defaultFormatter": "DotJoshJohnson.xml"
-    },
-    "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[csharp]": {
-        "editor.defaultFormatter": "Leopotam.csharpfixformat"
-    },
-    "omnisharp.autoStart": false,
-    "omnisharp.enableEditorConfigSupport": true,
-    "omnisharp.enableRoslynAnalyzers": true,
-     
-    //Files
-    "files.watcherExclude": {
-        // fix warnings in linux systems. ex: rust compiler
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/*/**": true,
-        "**/target/**": true
-    },
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/node_modules": true,
-        "**/obj": true
-    },
-    // Prettier and Vetur
-    "prettier.singleQuote": true,
-    "prettier.semi": false,
-    "prettier.jsxSingleQuote": true,
-    "prettier.vueIndentScriptAndStyle": true,
-    "vetur.format.defaultFormatterOptions": {
-        "prettier": {
-            "semi": false,
-            "singleQuote": true,
-            "useEditorConfig": true
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        // Press Ctrl+Shift+F to open the search box
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        // Press Alt+Shift+D to open a new pane.
+        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
+        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
+        // To learn more about panes, visit https://aka.ms/terminal-panes
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
         }
-    },
-    // eslint
-    "eslint.options": {
-        "extensions": [
-            ".js",
-            ".vue"
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "profiles": 
+    {
+        "defaults": {},
+        "list": 
+        [
+            {
+                "acrylicOpacity": 0.81000000000000005,
+                "commandline": "powershell.exe",
+                "experimental.retroTerminalEffect": false,
+                "fontFace": "Monaco for Powerline",
+                "fontWeight": "medium",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell",
+                "useAcrylic": true
+            },
+            {
+                "commandline": "cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
         ]
     },
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "vue"
-    ],
-    // Sync Settings
-    "sync.autoDownload": false,
-    "sync.autoUpload": false,
-    "sync.forceDownload": false,
-    "sync.forceUpload": true,
-    "sync.quietSync": false,
-    "sync.removeExtensions": true,
-    "sync.syncExtensions": true,
-    "sync.gist": "fb7f0a7ddd3c4aca76af43cedc01aff5",
-    // CSpell
-    "cSpell.userWords": [
-        "Ganss",
-        "Hsts",
-        "Proto",
-        "Queryable",
-        "Xunit",
-        "commandline",
-        "gridify",
-        "miladi",
-        "nuget",
-        "typeof"
-    ],
-    "cSpell.language": "en,fa,fa-IR",
-    // "cSpell.ignoreRegExpList": [
-    //    "/[\\u0621-\\u064A]+/"
-    // ],
-    // Todo-tree
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "UNDONE",
-        "REVIEW"
-    ],
-    "todo-tree.general.tagGroups": {
-        "FIXME": [
-            "FIXME",
-            "FIXIT",
-            "FIX",
-        ],
-    },
-    "todo-tree.tree.showScanModeButton": true,
-    "todo-tree.tree.flat": true,
-    // Other Extensions
-    "vsicons.dontShowNewVersionMessage": true,
-    "dotnet-test-explorer.enableTelemetry": false,
-    "c-cpp-compile-run.run-in-external-terminal": true,
-    "vsintellicode.modify.editor.suggestSelection": "enabled",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "python.languageServer": "Microsoft",
-    "workbench.colorTheme": "Soothing",
-    "problems.showCurrentInStatus": true,
+    "schemes": 
+    [
+        {
+            "background": "#0C0C0C",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "background": "#012456",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell Powershell",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "background": "#282C34",
+            "black": "#282C34",
+            "blue": "#61AFEF",
+            "brightBlack": "#5A6374",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B6C2",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C678DD",
+            "brightRed": "#E06C75",
+            "brightWhite": "#DCDFE4",
+            "brightYellow": "#E5C07B",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#56B6C2",
+            "foreground": "#DCDFE4",
+            "green": "#98C379",
+            "name": "One Half Dark",
+            "purple": "#C678DD",
+            "red": "#E06C75",
+            "selectionBackground": "#FFFFFF",
+            "white": "#DCDFE4",
+            "yellow": "#E5C07B"
+        },
+        {
+            "background": "#FAFAFA",
+            "black": "#383A42",
+            "blue": "#0184BC",
+            "brightBlack": "#4F525D",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B5C1",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C577DD",
+            "brightRed": "#DF6C75",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#E4C07A",
+            "cursorColor": "#4F525D",
+            "cyan": "#0997B3",
+            "foreground": "#383A42",
+            "green": "#50A14F",
+            "name": "One Half Light",
+            "purple": "#A626A4",
+            "red": "#E45649",
+            "selectionBackground": "#FFFFFF",
+            "white": "#FAFAFA",
+            "yellow": "#C18301"
+        },
+        {
+            "background": "#002B36",
+            "black": "#002B36",
+            "blue": "#268BD2",
+            "brightBlack": "#073642",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#2AA198",
+            "foreground": "#839496",
+            "green": "#859900",
+            "name": "Solarized Dark",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "background": "#FDF6E3",
+            "black": "#002B36",
+            "blue": "#268BD2",
+            "brightBlack": "#073642",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#002B36",
+            "cyan": "#2AA198",
+            "foreground": "#657B83",
+            "green": "#859900",
+            "name": "Solarized Light",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#06989A",
+            "foreground": "#D3D7CF",
+            "green": "#4E9A06",
+            "name": "Tango Dark",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "background": "#FFFFFF",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#000000",
+            "cyan": "#06989A",
+            "foreground": "#555753",
+            "green": "#4E9A06",
+            "name": "Tango Light",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#000080",
+            "brightBlack": "#808080",
+            "brightBlue": "#0000FF",
+            "brightCyan": "#00FFFF",
+            "brightGreen": "#00FF00",
+            "brightPurple": "#FF00FF",
+            "brightRed": "#FF0000",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFF00",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#008080",
+            "foreground": "#C0C0C0",
+            "green": "#008000",
+            "name": "Vintage",
+            "purple": "#800080",
+            "red": "#800000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#C0C0C0",
+            "yellow": "#808000"
+        }
+    ]
 }
